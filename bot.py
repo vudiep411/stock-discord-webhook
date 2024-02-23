@@ -4,11 +4,17 @@ from volatility import *
 from top_gain_lose import *
 import os
 from dotenv import load_dotenv
+import sys
 
 load_dotenv()
 
 webhook_url = os.getenv('WEBHOOK_URL')
-
+if not webhook_url:
+    if len(sys.argv) > 1:
+        webhook_url = sys.argv[1]
+    else:
+        print("Error: Please provide a webhook URL as a command line argument or set the WEBHOOK_URL environment variable.")
+        sys.exit(1)
 
 def send(message):
     payload = json.dumps(message)

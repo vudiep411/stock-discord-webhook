@@ -19,6 +19,6 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         
-      - name: make and cancel reservation
+      - name: Run Scripts
         run: |
-          python bot.py
+          python bot.py ${{ secrets.WEBHOOK_URL }}
