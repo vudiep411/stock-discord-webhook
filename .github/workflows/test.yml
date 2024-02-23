@@ -21,4 +21,5 @@ jobs:
         
       - name: Run Scripts
         run: |
-          python bot.py ${{ secrets.WEBHOOK_URL }}
+          python gainers_losers.py ${{ secrets.WEBHOOK_URL }}
+          python trending.py ${{ secrets.TRENDING_WEBHOOK }}

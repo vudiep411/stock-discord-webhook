@@ -1,7 +1,7 @@
 import requests
 import json
-from volatility import *
-from top_gain_lose import *
+from utils.volatility import *
+from utils.top_gain_lose import *
 import os
 from dotenv import load_dotenv
 import sys
