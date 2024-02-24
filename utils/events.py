@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 
 def scrap_earnings():
     today = datetime.now().date()
+    today = today + timedelta(days=1)
     m = defaultdict(set)
     for i in range(1,6):
         headers = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/601.3.9 (KHTML, like Gecko) Version/9.0.2 Safari/601.3.9'}

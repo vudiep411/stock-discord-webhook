@@ -1,9 +1,9 @@
 name: Run Update
 on:
-  push:
-    branches:
-        - main
-        - dev
+  schedule:
+    - cron: '0 1 * * 1'
+  workflow_dispatch:
+
 jobs:
   run-update-daily:
     runs-on: ubuntu-latest
@@ -22,3 +22,4 @@ jobs:
       - name: Run Scripts
         run: |
           python earnings.py ${{ secrets.EARNING_WEBHOOK }}
+          
