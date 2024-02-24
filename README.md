@@ -27,7 +27,7 @@ To set up the Discord Stock Market Bot:
 
 Once the bot is set up and running, it will automatically fetch data from the stock market and send updates to your Discord server according to the configured schedule or triggers.
 
-You can interact with the bot on Discord by using commands or by viewing the messages it sends to the designated channels.
+You can interact with the automated Discord webhook by viewing the messages it sends to the designated channels.
 
 ## Contributing
 
